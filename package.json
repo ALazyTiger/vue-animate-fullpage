@@ -1,0 +1,37 @@
+{
+  "name": "vue-animate-fullpage",
+  "description": "基于animate.css动画库的全屏滚动，适用于vue.js(移动端、pc)项目。",
+  "version": "1.0.0",
+  "author": "~ALazyTiger",
+  "license": "MIT",
+  "main": "dits/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALazyTiger/vue-animate-fullpage.git"
+  },
+  "homepage": "https://github.com/ALazyTiger/vue-animate-fullpage/#readme",
+  "keywords": [
+    "vue",
+    "scroll",
+    "single",
+    "page"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "vue": "^2.5.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "files":[
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
+}
