@@ -12,9 +12,9 @@
   "homepage": "https://github.com/ALazyTiger/vue-animate-fullpage/#readme",
   "keywords": [
     "vue",
-    "scroll",
-    "single",
-    "page"
+    "fullpage",
+    "animate-fullpage",
+    "vue-animate-fullpage"
   ],
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
