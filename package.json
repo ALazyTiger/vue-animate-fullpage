@@ -1,7 +1,7 @@
 {
   "name": "vue-animate-fullpage",
   "description": "基于animate.css动画库的全屏滚动，适用于vue.js(移动端、pc)项目。",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "~ALazyTiger",
   "license": "MIT",
   "main": "dits/index.js",
@@ -18,11 +18,5 @@
     "fullpage",
     "animate-fullpage",
     "vue-animate-fullpage"
-  ],
-  "files": [
-    "dist/",
-    "README.md",
-    "LICENSE",
-    "package.json"
   ]
 }
