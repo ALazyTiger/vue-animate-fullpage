@@ -11,9 +11,9 @@
 #### main.js
  > 在main.js需要引入该插件的css和js文件
  
- > import 'vue-animate-fullpage/animate.css'
+ > import 'vue-animate-fullpage/dist/animate.css'
  
- > import VueAnimateFullpage from 'vue-animate-fullpage'
+ > import VueAnimateFullpage from 'vue-animate-fullpage/dist/index'
  
  > Vue.use(VueAnimateFullpage)
 
