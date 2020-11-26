@@ -16,26 +16,27 @@
  > import VueAnimateFullpage from 'vue-animate-fullpage/dist/index'
  
  > Vue.use(VueAnimateFullpage)
-
+ 
+ > Vue.prototype.$fullscreen = VueAnimateFullpage; //全局挂载，方便手动跳转
 #### template
 
  > 在page-wp容器上加v-fullpage指令,v-fullpage的值是fullpage的配置 在page容器上加v-animate指令,v-animate的值是animate.css的动画效果
 ``` html
-	<div class="fullpage-container">
-	  <div class="fullpage-wp" v-fullpage="opts">
-		<div class="page-1 page">
-		  <p class="part-1" v-animate="{value: 'bounceInLeft'}">vue-fullpage</p>
-		</div>
-		<div class="page-2 page">
-		  <p class="part-2" v-animate="{value: 'bounceInRight'}">vue-fullpage</p>
-		</div>
-		<div class="page-3 page">
-		  <p class="part-3" v-animate="{value: 'bounceInLeft', delay: 0}">vue-fullpage</p>
-		  <p class="part-3" v-animate="{value: 'bounceInRight', delay: 600}">vue-fullpage</p>
-		  <p class="part-3" v-animate="{value: 'zoomInDown', delay: 1200}">vue-fullpage</p>
-		</div>
-	  </div>
-	</div>
+<div class="fullscreen">
+  <div class="fullscreen-wp" v-fullscreen="opts" ref="fullscreen">
+    <div class="page-1 page">
+      <p class="part-1" v-animate="{value: 'bounceInLeft'}">1</p>
+    </div>
+    <div class="page-2 page">
+      <p class="part-2" v-animate="{value: 'bounceInRight'}">2</p>
+    </div>
+    <div class="page-3 page">
+      <p class="part-3" v-animate="{value: 'bounceInLeft', delay: 0}">part-3-1</p>
+      <p class="part-3" v-animate="{value: 'bounceInRight', delay: 600}" >part-3-2</p>
+      <p class="part-3" v-animate="{value: 'zoomInDown', delay: 1200}">part-3-3</p>
+    </div>
+  </div>
+</div>
 ``` 
 
 ``` js
@@ -44,17 +45,17 @@ export default {
   data() {
     return {
       opts: {
-		  start: 0,
-		  dir: 'v',
-		  loop: false,
-		  duration: 500,
-		  beforeChange: (prev, next)=> {
-			console.log('before', prev, next)
-		  },
-		  afterChange: (prev, next)=> {
-			console.log('after', prev, next)
-		  }
-   	 	}
+        start: 0,
+        loop: true,
+        direction: "h", 
+        duration: 500,
+        preventWechat:true,
+        beforeChange: (prev, next)=> {
+        },
+        afterChange:(prev, next)=>{
+          
+        }
+      }
     }
   }
 }
@@ -78,10 +79,10 @@ ___
 ##### loop
  > 是否支持循环滚动，默认为false
 
-##### dir
+##### direction
  > 滚动方向，默认为v，垂直滚动 垂直滚动：v,水平滚动：h
 
-##### der
+##### distance
  > 最小滑动距离，只有滑动距离大于最小滑动距离才会触发滚动效果 默认为：0.1
 
 ##### beforeChange
