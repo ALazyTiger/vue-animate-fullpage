@@ -7,6 +7,43 @@
  *
  * Copyright (c) 2020 Animate.css
  */
+ .fullscreen-container{
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+ }
+ .fullscreen-wp {
+	display: flex;
+  width: 100%;
+  height: 100%;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+ .anim {
+   -webkit-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);
+   -webkit-transition: all 500ms ease-out 0s;
+   transition: all 500ms ease-out 0s;
+ }
+ .fullscreen-wp.fullscreen-wp-h {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: flex-start;
+   align-items: center;
+ }
+
+ .page {
+   box-sizing: border-box;
+   display: block;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   flex-shrink: 0;
+   overflow: hidden;
+ }
+
+
 :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
