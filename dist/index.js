@@ -44,7 +44,7 @@ fullscreen.initAnimate = function (el, binding, vnode) {
     }
     var curPage = +parent.getAttribute('data-id');
 
-    if (curIndex === curPage) {
+    if (Number(curIndex) === curPage) { //修复后端生成跳转事件，由于类型不匹配，页面跳转后动画无效的bug
       that.addAnimated(el, aminate);
     } else {
       el.style.opacity = '0';
@@ -64,7 +64,7 @@ fullscreen.addAnimated = function (el, animate) {
 }
 
 fullscreen.removeAnimated = function (el, animate) {
-  if(el.getAttribute('class').indexOf('animated') > -1) {
+  if (el.getAttribute('class').indexOf('animated') > -1) {
     el.classList.remove(animate.value)
   }
 }
@@ -194,8 +194,7 @@ fullscreen.moveTo = function (curIndex, anim) {
   if (anim) {
     var flag = that.o.beforeChange(that.prevIndex, curIndex);
     if (flag === false) {
-      // 重置movingFlag
-      that.o.movingFlag = false;
+      that.o.movingFlag = false;// 重置movingFlag
       return false;
     }
     that.curIndex = curIndex;
