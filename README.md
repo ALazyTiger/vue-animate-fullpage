@@ -6,6 +6,8 @@
 ### 安装
  > npm install vue-animate-fullpage --save
 
+### bug修复
+> 1.1.1版本，修复由于后端生成跳转事件，类型不匹配，页面跳转后动画无效的bug
 ### 使用
 
 #### main.js
@@ -82,9 +84,6 @@ ___
 ##### direction
  > 滚动方向，默认为v，垂直滚动 垂直滚动：v,水平滚动：h
 
-##### distance
- > 最小滑动距离，只有滑动距离大于最小滑动距离才会触发滚动效果 默认为：0.1
-
 ##### beforeChange
  > 当页面在滑动后触发beforeChange 包含两个参数prev和next，指当前页面和滑动后页面的index 在beforeChange方法中return false可以阻止页面的滑动
 
@@ -104,4 +103,5 @@ ___
 ``` 
 ##### value
 这个属性是一个元素的动画类型, 它的值取决于animate.css。
+
  
